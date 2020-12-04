@@ -10,7 +10,9 @@ public class Range implements IntegerSequence{
     this.current=start;
   }
 
-  public void reset(){  }
+  public void reset(){
+    this.current=start;
+  }
   public int length(){ return 0; }
 
   //When current is no longer a valid element in the range, it should return false.
@@ -20,5 +22,9 @@ public class Range implements IntegerSequence{
   //This will return the current value, it will also increase current value by 1.
   //e.g.  if current is 5. This will make current 6, and return 5.
   public int next(){  return 0;  }
+
+  public String toString(){
+    return "start:"+start+" current:"+current+" end:"+end;
+  }
 
 }
