@@ -21,7 +21,7 @@ public class Tester{
       System.out.println("catched exception");
     }
   }
-  */
+
   public static int ERR = 0;
 public static boolean DEBUG = true;
 public static void main(String[] args) {
@@ -77,5 +77,5 @@ public static void except(String test, RuntimeException e) {
 public static void noException(String test, String expected) {
     System.out.println("Failure on " + test + ": Expected " + expected);
     ERR++;
-}
+}*/
 }
