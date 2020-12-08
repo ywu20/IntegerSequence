@@ -13,13 +13,22 @@ public class ArraySequence implements IntegerSequence{
   }
   //Postcondition: The otherseq will be reset.
 //This constructor will copy ALL values of the `otherseq` into the data array.
-public ArraySequence(IntegerSequence otherseq){  }
+public ArraySequence(IntegerSequence otherseq){
+
+}
 
 public boolean hasNext(){
+  if(currentIndex>=data.length){
+    return false;
+  }
   return true;
 }//does the sequence have more elements?
 public int next(){
-  return 0;
+  if(!hasNext()){
+    throw new NoSuchElementException();
+  }
+    currentIndex++;
+  return data[currentIndex-1];
 }         //return the current value in the sequence and advances to the next element
 public int length(){
   return 0;
