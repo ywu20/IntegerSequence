@@ -14,7 +14,12 @@ public class ArraySequence implements IntegerSequence{
   //Postcondition: The otherseq will be reset.
 //This constructor will copy ALL values of the `otherseq` into the data array.
 public ArraySequence(IntegerSequence otherseq){
-
+  otherseq.reset();
+  data=new int[otherseq.length()];
+  for(int i=0;i<otherseq.length();i++){
+    data[i]=otherseq.next();
+  }
+  otherseq.reset();
 }
 
 public boolean hasNext(){
@@ -31,10 +36,10 @@ public int next(){
   return data[currentIndex-1];
 }         //return the current value in the sequence and advances to the next element
 public int length(){
-  return 0;
+  return data.length;
 }     //returns the total length of the sequence
 public void reset(){
-
+  currentIndex=0;
 }     //start over from the start of the sequence
 
 }
