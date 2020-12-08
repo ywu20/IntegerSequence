@@ -2,8 +2,9 @@ import java.util.NoSuchElementException;
 import java.util.ArrayList;
 public class Tester{
 
-  /*
+
   public static void main(String[] args){
+    /*
     IntegerSequence a=new Range(30,50);
     System.out.println(a);
     System.out.println(a.length());
@@ -77,5 +78,30 @@ public static void except(String test, RuntimeException e) {
 public static void noException(String test, String expected) {
     System.out.println("Failure on " + test + ": Expected " + expected);
     ERR++;
-}*/
+}
+
+int[]nums = {1,3,5,0,-1,3,9};
+IntegerSequence as = new ArraySequence(nums);
+System.out.println("ArraySequence(array):");
+    while(as.hasNext()){
+      System.out.print(as.next()+", ");
+    }
+    System.out.print("length "+as.length());
+    as.reset();
+    System.out.println("reset "+as.next());
+
+    IntegerSequence r = new Range(10,20);
+    IntegerSequence as2 = new ArraySequence(r);
+
+    System.out.println("ArraySequence(seq):");
+    while(as2.hasNext()){
+      System.out.print(as2.next()+", ");
+    }
+
+    System.out.println();
+    System.out.print("length "+as2.length());
+    as2.reset();
+    System.out.println("reset "+as2.next());
+    */
+}
 }
